@@ -16,7 +16,6 @@ export class Navigation extends Component<Props, State> {
     return <nav>
       <ul>
         <li><Link href="/">Home</Link></li>
-        <li><Link href="/authors">Authors</Link></li>
       </ul>
     </nav>;
   }
