@@ -1,13 +1,13 @@
 import * as React from 'react';
 import Head from 'next/head';
-import styles from '../styles/Home.module.scss';
+import styles from '../styles/pages/Home.module.scss';
 
 export default function Home() {
   return (
     <div>
       <Head>
         <title>Posts</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.png" />
       </Head>
 
       <main>
