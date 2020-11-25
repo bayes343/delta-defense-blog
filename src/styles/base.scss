@@ -2,16 +2,60 @@
 
 html,
 body {
+  overflow-x: hidden;
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
-@media (min-width: $tablet) {
+a {
+  text-decoration: none;
+}
 
+header{
+  position: fixed;
+  width: 100vw;
+  background: $dark-background-gradient;
+}
+
+header {
+  top: 0;
+  left: 0;
+  height: 100px;
+}
+
+footer {
+  background: $dark-background-gradient;
+  width: 100vw;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+main {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  padding-top: 20px;
+  min-height: calc(100vh - 320px);
+}
+
+@media (min-width: $tablet) {
+  main {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
 }
 
 @media (min-width: $desktop) {
-
+  main {
+    padding-left: calc((100vw - 1140px) / 2);
+    padding-right: calc((100vw - 1140px) / 2);
+  }
 }

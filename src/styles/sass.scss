@@ -3,6 +3,9 @@ $tablet: 768px;
 $desktop: 1024px;
 
 // ============= Colors ============= //
+$dark-background-gradient: linear-gradient(180deg,#121212 0,#232425);
+$yellow: #ffcd00;
+$medium-grey: rgba(68,69,70,.45);
 
 // ============= Mixins ============= //
 @mixin rem($property, $values) {

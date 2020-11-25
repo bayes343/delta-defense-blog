@@ -1,0 +1,29 @@
+@import '../sass.scss';
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: $medium-grey;
+}
+
+.home-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    @include rem(font-size, 24px);
+    color: white;
+    margin-left: 20px;
+  }
+}
+
+@media (min-width: $tablet) {
+
+}
+
+@media (min-width: $desktop) {
+
+}

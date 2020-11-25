@@ -13,10 +13,15 @@ export class Navigation extends Component<Props, State> {
   }
 
   render(): ReactNode {
-    return <nav>
-      <ul>
-        <li><Link href="/">Home</Link></li>
-      </ul>
+    return <nav className="navigation">
+      <Link href="/">
+        <a>
+          <div className="home-link">
+            <img src="/header-logo.svg" alt="Home"></img>
+            <p>Delta Defense Blog</p>
+          </div>
+        </a>
+      </Link>
     </nav>;
   }
 }

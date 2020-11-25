@@ -1,6 +1,6 @@
 import Head from 'next/head';
-import { Navigation } from '../components/module';
-import '../styles/base.scss';
+import { Footer, Navigation } from '../components/module';
+import '../styles/styles.scss';
 
 function DeltaDefenseBlog({ Component, pageProps }) {
   return <div>
@@ -17,7 +17,7 @@ function DeltaDefenseBlog({ Component, pageProps }) {
     </main>
 
     <footer>
-      <p>Super Badass Blog</p>
+      <Footer />
     </footer>
   </div>;
 }
