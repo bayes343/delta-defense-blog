@@ -9,7 +9,7 @@
     "lint": "eslint **/*.ts*",
     "deploy": "firebase deploy --token $FIREBASE_TOKEN",
     "test": "jest --watch",
-    "test-once": "jest --coverage"
+    "test-once": "jest --collectCoverage --coverageReporters lcov clover"
   },
   "dependencies": {
     "next": "10.0.3",
@@ -41,6 +41,21 @@
     "moduleNameMapper":{
       "\\.(css|less|sass|scss)$": "<rootDir>/__mocks__/styleMock.js",
       "\\.(gif|ttf|eot|svg)$": "<rootDir>/__mocks__/fileMock.js"
+    },
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "**/*.{ts,tsx}",
+      "!**/constants.ts",
+      "!**/node_modules/**",
+      "!**/vendor/**"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
     }
  }
 }
