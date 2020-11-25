@@ -1,5 +1,5 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.scss'
+import Head from 'next/head';
+import styles from '../styles/Home.module.scss';
 
 export default function Home() {
   return (
@@ -39,7 +39,8 @@ export default function Home() {
           </a>
 
           <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+            // eslint-disable-next-line max-len
+            href="https://vercel.com/import?filter=next.js\&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
             className={styles.card}
           >
             <h3>Deploy &rarr;</h3>
@@ -61,5 +62,5 @@ export default function Home() {
         </a>
       </footer>
     </div>
-  )
+  );
 }
