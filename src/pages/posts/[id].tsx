@@ -3,16 +3,16 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 
 export default function PostDetail() {
-  const title = useRouter().query.title;
+  const id = useRouter().query.id;
 
   return (
     <div>
       <Head>
-        <title>{title}</title>
+        <title>{id}</title>
       </Head>
 
       <main>
-        <h1>{title}</h1>
+        <h1>{id}</h1>
       </main>
     </div>
   );

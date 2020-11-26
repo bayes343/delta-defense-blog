@@ -17,6 +17,7 @@ header{
   position: fixed;
   width: 100vw;
   background: $dark-background-gradient;
+  z-index: 10;
 }
 
 header {
@@ -37,19 +38,24 @@ footer {
 main {
   padding-left: 20px;
   padding-right: 20px;
-}
-
-main {
   margin-top: 100px;
   margin-bottom: 100px;
   padding-top: 20px;
   min-height: calc(100vh - 320px);
 }
 
+img {
+  max-width: 100%;
+}
+
 @media (min-width: $tablet) {
   main {
     padding-left: 40px;
     padding-right: 40px;
+  }
+
+  h1 {
+    text-align: center;
   }
 }
 

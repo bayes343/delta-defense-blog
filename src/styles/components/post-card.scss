@@ -1,0 +1,40 @@
+@import '../sass.scss';
+
+.post-card {
+  @include rem(font-size, 14px);
+  height: 100%;
+  width: 100%;
+  border: 1px solid $light-grey;
+  cursor: pointer;
+  transition: transform .5s;
+
+  &:active,
+  &:hover,
+  &:focus {
+    background: $dark-background-gradient;
+    color: $yellow;
+    transform: translateY(-10px);
+  }
+
+  .image-wrapper {
+    height: 215px;
+  }
+
+  h2 {
+    margin: 0;
+    height: calc(100% - 215px);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+  }
+
+  @media (min-width: $tablet) {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  @media (min-width: $desktop) {
+
+  }
+}

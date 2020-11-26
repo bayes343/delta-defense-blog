@@ -6,6 +6,7 @@ $desktop: 1024px;
 $dark-background-gradient: linear-gradient(180deg,#121212 0,#232425);
 $yellow: #ffcd00;
 $medium-grey: rgba(68,69,70,.45);
+$light-grey: #e7e9ec;
 
 // ============= Mixins ============= //
 @mixin rem($property, $values) {

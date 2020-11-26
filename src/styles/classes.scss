@@ -1,0 +1,21 @@
+@import './sass.scss';
+
+.image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+@media (min-width: $tablet) {
+
+}
+
+@media (min-width: $desktop) {
+
+}

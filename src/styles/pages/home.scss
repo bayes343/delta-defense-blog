@@ -1,0 +1,37 @@
+@import '../sass.scss';
+
+.home-page {
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      margin-bottom: 20px;
+      width: 100%;
+    }
+  }
+
+  @media (min-width: $tablet) {
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      li {
+        margin-bottom: 40px;
+        height: 340px;
+        width: calc((100% - 40px) / 2);
+      }
+    }
+  }
+
+  @media (min-width: $desktop) {
+    ul {
+
+      li {
+        width: calc((100% - 90px) / 3);
+      }
+    }
+  }
+}

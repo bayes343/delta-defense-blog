@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Component, ReactNode } from 'react';
 import Link from 'next/link';
+import { Images } from '../enums/module';
 
 interface Props {}
 interface State {}
@@ -17,7 +18,7 @@ export class Navigation extends Component<Props, State> {
       <Link href="/">
         <a>
           <div className="home-link">
-            <img src="/header-logo.svg" alt="Home"></img>
+            <img src={Images.HeaderLogo} alt="Home"></img>
             <p>Delta Defense Blog</p>
           </div>
         </a>
