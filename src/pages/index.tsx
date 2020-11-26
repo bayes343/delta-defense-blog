@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import Head from 'next/head';
 import { ContentType, JsonPlaceholderRepository } from '../services/module';
 
-export default function Home(props) {
+export default function Posts(props) {
   const [repository] = useState(props.repository || JsonPlaceholderRepository.Instance);
   const [posts, setPosts] = useState([]);
 
