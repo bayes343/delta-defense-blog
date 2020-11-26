@@ -1,0 +1,118 @@
+@import '../sass.scss';
+
+.post-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h1 {
+    text-transform: capitalize;
+  }
+
+  p {
+    @include rem(font-size, 18px);
+    margin-top: 40px;
+  }
+
+  .hero {
+    background: $dark-background-gradient;
+    color: white;
+    margin-top: -20px;
+
+    a {
+      margin-left: 5px;
+      color: $yellow;
+      font-weight: bold;
+    }
+
+    .image-wrapper {
+      width: 100vw;
+    }
+
+    h1,
+    p {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+
+  .content {
+    h2 {
+      margin-top: 50px;
+    }
+
+    p {
+      @include rem(font-size, 20px);
+    }
+  }
+
+  .comment-list {
+    list-style: none;
+    padding: 0;
+
+    li {
+      @include rem(font-size, 16px);
+      background: $dark-background-gradient;
+      color: white;
+      margin-bottom: 40px;
+      padding: 10px;
+      border-radius: 5px;
+
+      blockquote,
+      p {
+        margin: 0;
+      }
+
+      blockquote {
+        margin-bottom: 15px;
+        background: $medium-grey;
+        padding: 5px;
+        border-radius: 5px;
+      }
+
+      a {
+        color: $yellow;
+      }
+    }
+  }
+
+  @media (min-width: $tablet) {
+    .hero {
+      background: transparent;
+      color: black;
+      text-align: center;
+      margin-top: 0;
+      width: 50vw;
+
+      .image-wrapper {
+        width: 100%;
+      }
+    }
+  }
+
+  @media (min-width: $desktop) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 50px;
+
+    .hero {
+      width: 35%;
+
+      h1,
+      p {
+        text-align: left;
+        padding: 0;
+      }
+    }
+
+    .content {
+      width: 60%;
+
+      p {
+        margin: 0;
+      }
+    }
+  }
+}

@@ -21,4 +21,9 @@ export class JsonPlaceholderRepository implements IJsonPlaceholderRepository {
     const response = await fetch(`${baseUrl}/${contentType}/${id}`);
     return await response.json();
   }
+
+  public async GetChildContent<T>(parentType: ContentType, parentId: string, childType: ContentType): Promise<T[]> {
+    const response = await fetch(`${baseUrl}/${parentType}/${parentId}/${childType}`);
+    return await response.json();
+  }
 }

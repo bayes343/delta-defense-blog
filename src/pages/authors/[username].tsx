@@ -1,6 +1,7 @@
 import * as React from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
+import { AppName } from '../../constants';
 
 export default function AuthorDetail() {
   const username = useRouter().query.username;
@@ -8,12 +9,10 @@ export default function AuthorDetail() {
   return (
     <div>
       <Head>
-        <title>{username}</title>
+        <title>{username} | {AppName}</title>
       </Head>
 
-      <main>
-        <h1>{username}</h1>
-      </main>
+      <h1>{username}</h1>
     </div>
   );
 }

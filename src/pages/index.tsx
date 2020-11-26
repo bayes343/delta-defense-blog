@@ -5,9 +5,7 @@ import {
   ContentType, IInfiniteScroll, IJsonPlaceholderRepository,
   InfiniteScroll, JsonPlaceholderRepository } from '../services/module';
 import { PostCard } from '../components/module';
-import { AppName } from '../constants';
-
-const initialLimit = 12;
+import { AppName, InitialContentLimit } from '../constants';
 
 interface Props {
   repository: IJsonPlaceholderRepository,
@@ -19,13 +17,13 @@ export default function Home(props: Props) {
   const [infiniteScroll] = useState(props.infiniteScroll || InfiniteScroll.Instance);
 
   const [posts, setPosts] = useState([]);
-  const [postsToShowCount, setPostsToShowCount] = useState(initialLimit);
+  const [postsToShowCount, setPostsToShowCount] = useState(InitialContentLimit);
 
   useEffect(() => {
     repository.GetAll(ContentType.Posts)
       .then((data) => {
         setPosts(data);
-        infiniteScroll.Subscribe(initialLimit, data.length, setPostsToShowCount);
+        infiniteScroll.Subscribe(InitialContentLimit, data.length, setPostsToShowCount);
       });
 
     return () => {

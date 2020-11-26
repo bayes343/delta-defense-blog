@@ -1,6 +1,6 @@
 import { Mock } from 'tsmockit';
 import * as React from 'react';
-import { mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import { act } from '@testing-library/react';
 import { ContentType, IInfiniteScroll, IJsonPlaceholderRepository } from '../../services/module';
 import Home from '../../pages/index';
@@ -15,12 +15,12 @@ describe('Index', () => {
       resolve(stubPosts);
     }));
 
-    mockInfiniteScroll.Setup(s => s.Setup(0, 0, () => null));
+    mockInfiniteScroll.Setup(s => s.Subscribe(0, 0, () => null));
   });
 
   it('should render without throwing an error', async function () {
     await act(async () => {
-      const wrap = await mount(<Home
+      const wrap = await shallow(<Home
         repository={mockJsonPlaceholderRepository.Object}
         infiniteScroll={mockInfiniteScroll.Object} />);
       expect(wrap.find('h1').text()).toBe('Posts');
