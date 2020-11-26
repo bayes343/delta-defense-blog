@@ -5,6 +5,7 @@ import { useRouter } from 'next/router';
 import { AppName } from '../../constants';
 import { ContentType, IJsonPlaceholderRepository, JsonPlaceholderRepository } from '../../services/module';
 import { Images } from '../../enums/Images';
+import { IUser } from '../../domain/module';
 
 interface Props {
   repository: IJsonPlaceholderRepository
@@ -67,4 +68,18 @@ export default function AuthorDetail(props: Props) {
         </> : null}
     </div>
   );
+}
+
+export async function getStaticPaths() {
+  const posts = await JsonPlaceholderRepository.Instance.GetAll<IUser>(ContentType.Users);
+
+  const paths = posts.map((user) => ({
+    params: { id: user.id.toString() }
+  }));
+
+  return { paths, fallback: false };
+}
+
+export async function getStaticProps() {
+  return { props: { }, revalidate: 1 };
 }

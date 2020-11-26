@@ -7,6 +7,7 @@ import { useRouter } from 'next/router';
 import { ContentType, IJsonPlaceholderRepository, JsonPlaceholderRepository } from '../../services/module';
 import { AppName } from '../../constants';
 import { blogImages, Classes } from '../../enums/module';
+import { IPost } from '../../domain/module';
 
 interface Props {
   repository: IJsonPlaceholderRepository
@@ -79,4 +80,18 @@ export default function PostDetail(props: Props) {
       });
     }
   }
+}
+
+export async function getStaticPaths() {
+  const posts = await JsonPlaceholderRepository.Instance.GetAll<IPost>(ContentType.Posts);
+
+  const paths = posts.map((post) => ({
+    params: { id: post.id.toString() }
+  }));
+
+  return { paths, fallback: false };
+}
+
+export async function getStaticProps() {
+  return { props: { }, revalidate: 1 };
 }
