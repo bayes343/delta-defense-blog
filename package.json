@@ -15,7 +15,9 @@
     "next": "10.0.3",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
-    "sass": "^1.29.0"
+    "sass": "^1.29.0",
+    "tsbase": "^3.1.2",
+    "tsmockit": "^1.0.5"
   },
   "devDependencies": {
     "@types/enzyme": "^3.10.8",
