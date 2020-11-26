@@ -6,7 +6,8 @@ export enum Images {
   BlogThree = '/images/blog-3.jpg',
   BlogFour = '/images/blog-4.jpg',
   BlogFive = '/images/blog-5.jpg',
-  BlogSix = '/images/blog-6.jpg'
+  BlogSix = '/images/blog-6.jpg',
+  MapPin = '/images/map-pin.svg'
 }
 
 export const blogImages = [

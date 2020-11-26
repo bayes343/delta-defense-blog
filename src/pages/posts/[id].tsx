@@ -40,7 +40,7 @@ export default function PostDetail(props: Props) {
             </div>
             <h1>{post.title}</h1>
             <p>By:
-              <Link href={`/authors/${author.username}`}>
+              <Link href={`/authors/${author.id}`}>
                 <a>
                   {author.name} | {author.address.city}
                 </a>
