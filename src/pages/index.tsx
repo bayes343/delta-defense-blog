@@ -1,12 +1,20 @@
 import * as React from 'react';
 import { useEffect, useState } from 'react';
 import Head from 'next/head';
-import { ContentType, InfiniteScroll, JsonPlaceholderRepository } from '../services/module';
+import {
+  ContentType, IInfiniteScroll, IJsonPlaceholderRepository,
+  InfiniteScroll, JsonPlaceholderRepository } from '../services/module';
 import { PostCard } from '../components/module';
+import { AppName } from '../constants';
 
 const initialLimit = 12;
 
-export default function Home(props) {
+interface Props {
+  repository: IJsonPlaceholderRepository,
+  infiniteScroll: IInfiniteScroll
+}
+
+export default function Home(props: Props) {
   const [repository] = useState(props.repository || JsonPlaceholderRepository.Instance);
   const [infiniteScroll] = useState(props.infiniteScroll || InfiniteScroll.Instance);
 
@@ -17,15 +25,19 @@ export default function Home(props) {
     repository.GetAll(ContentType.Posts)
       .then((data) => {
         setPosts(data);
-        infiniteScroll.Setup(initialLimit, data.length, setPostsToShowCount);
+        infiniteScroll.Subscribe(initialLimit, data.length, setPostsToShowCount);
       });
+
+    return () => {
+      infiniteScroll.Unsubscribe();
+    };
   }, []);
 
 
   return (
     <div className="home-page">
       <Head>
-        <title>Posts</title>
+        <title>Posts | {AppName}</title>
       </Head>
 
       <h1>Posts</h1>

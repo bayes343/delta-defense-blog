@@ -1,5 +1,6 @@
 export interface IInfiniteScroll {
-  Setup(currentLimit: number, maxLimit: number, maxCountSetter: (count: number) => void): void;
+  Subscribe(currentLimit: number, maxLimit: number, maxCountSetter: (count: number) => void): void;
+  Unsubscribe(): void;
 }
 
 export class InfiniteScroll implements IInfiniteScroll {
@@ -9,7 +10,7 @@ export class InfiniteScroll implements IInfiniteScroll {
 
   private constructor() { }
 
-  public Setup(currentLimit: number, maxLimit: number, maxCountSetter: (count: number) => void): void {
+  public Subscribe(currentLimit: number, maxLimit: number, maxCountSetter: (count: number) => void): void {
     const initialLimit = currentLimit;
 
     window.onscroll = () => {
@@ -28,5 +29,9 @@ export class InfiniteScroll implements IInfiniteScroll {
         maxCountSetter(currentLimit);
       }
     };
+  }
+
+  public Unsubscribe(): void {
+    window.onscroll = () => { };
   }
 }
