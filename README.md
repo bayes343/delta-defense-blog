@@ -1,6 +1,8 @@
 # Delta Defense Blog
 By: Joseph Bayes
 
+Build Status: [![Build status](https://dev.azure.com/joseph-w-bayes/delta-defense-blog/_apis/build/status/delta-defense-blog-CI)](https://dev.azure.com/joseph-w-bayes/delta-defense-blog/_build/latest?definitionId=35)
+
 ## Installation / Local Dev
 - Install dependencies - `npm i`
 - Build and watch - `npm run dev`
