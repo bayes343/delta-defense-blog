@@ -14,7 +14,7 @@ interface Props {
 }
 
 export default function PostDetail(props: Props) {
-  const [repository] = useState(props.repository || JsonPlaceholderRepository.Instance);
+  const [repository] = useState(props.repository || JsonPlaceholderRepository.Instance());
   const [post, setPost] = useState(null);
   const [author, setAuthor] = useState(null);
   const [comments, setComments] = useState([]);
@@ -83,7 +83,7 @@ export default function PostDetail(props: Props) {
 }
 
 export async function getStaticPaths() {
-  const posts = await JsonPlaceholderRepository.Instance.GetAll<IPost>(ContentType.Posts);
+  const posts = await JsonPlaceholderRepository.Instance().GetAll<IPost>(ContentType.Posts);
 
   const paths = posts.map((post) => ({
     params: { id: post.id.toString() }

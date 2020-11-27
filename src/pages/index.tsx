@@ -13,8 +13,8 @@ interface Props {
 }
 
 export default function Home(props: Props) {
-  const [repository] = useState(props.repository || JsonPlaceholderRepository.Instance);
-  const [infiniteScroll] = useState(props.infiniteScroll || InfiniteScroll.Instance);
+  const [repository] = useState(props.repository || JsonPlaceholderRepository.Instance());
+  const [infiniteScroll] = useState(props.infiniteScroll || InfiniteScroll.Instance());
 
   const [posts, setPosts] = useState([]);
   const [postsToShowCount, setPostsToShowCount] = useState(InitialContentLimit);
