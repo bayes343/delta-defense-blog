@@ -1,14 +1,13 @@
 import * as React from 'react';
 import { Component, ReactNode } from 'react';
-import { Queryable } from 'tsbase';
+import { Queryable } from 'tsbase/Collections/Queryable';
 import Link from 'next/link';
 import { IPost } from '../domain/IPost';
 import { blogImages, Classes } from '../enums/module';
 
 interface Props { post: IPost }
-interface State {}
 
-export class PostCard extends Component<Props, State> {
+export class PostCard extends Component<Props> {
   constructor(props: Props) {
     super(props);
 

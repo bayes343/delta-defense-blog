@@ -1,5 +1,3 @@
-import { Strings } from 'tsbase/Functions/Strings';
-
 export interface IComment {
   postId: number;
   id: number;

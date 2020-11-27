@@ -3,11 +3,8 @@ import { Component, ReactNode } from 'react';
 import Link from 'next/link';
 import { Images } from '../enums/module';
 
-interface Props {}
-interface State {}
-
-export class Navigation extends Component<Props, State> {
-  constructor(props: Props) {
+export class Navigation extends Component {
+  constructor(props) {
     super(props);
 
     this.state = {};

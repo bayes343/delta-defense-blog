@@ -1,11 +1,8 @@
 import * as React from 'react';
 import { Component, ReactNode } from 'react';
 
-interface Props {}
-interface State {}
-
-export class Footer extends Component<Props, State> {
-  constructor(props: Props) {
+export class Footer extends Component {
+  constructor(props) {
     super(props);
 
     this.state = {};

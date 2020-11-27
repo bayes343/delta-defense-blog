@@ -5,9 +5,9 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { ContentType, IJsonPlaceholderRepository, JsonPlaceholderRepository } from '../../services/module';
-import { AppName } from '../../constants';
 import { blogImages, Classes } from '../../enums/module';
 import { IPost } from '../../domain/module';
+import { AppName } from '../../constants';
 
 interface Props {
   repository: IJsonPlaceholderRepository
@@ -32,7 +32,7 @@ export default function PostDetail(props: Props) {
       {post && author ?
         <>
           <Head>
-            <title>{id} | {AppName}</title>
+            <title>{post.title.slice(0, 25)} | {AppName}</title>
           </Head>
 
           <section className="hero">
