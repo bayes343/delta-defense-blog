@@ -1,4 +1,4 @@
-import { IAddress } from './module';
+import { IAddress, ICompany } from './module';
 
 export interface IUser {
   id: number;
@@ -6,4 +6,7 @@ export interface IUser {
   username: string;
   email: string;
   address: IAddress;
+  phone: string;
+  website: string;
+  company: ICompany;
 }
