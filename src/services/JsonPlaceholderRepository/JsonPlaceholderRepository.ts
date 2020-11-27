@@ -1,7 +1,6 @@
+import { jsonPlaceHolderBaseUrl } from '../../constants';
 import { ContentType } from './ContentType';
 import { IJsonPlaceholderRepository } from './IJsonPlaceholderRepository';
-
-export const jsonPlaceHolderBaseUrl = 'https://jsonplaceholder.typicode.com';
 
 export type Fetch = (input: RequestInfo, init?: RequestInit) => Promise<Response>;
 

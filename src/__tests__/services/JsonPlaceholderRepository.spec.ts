@@ -1,7 +1,6 @@
+import { jsonPlaceHolderBaseUrl } from '../../constants';
 import { IPost } from '../../domain/IPost';
-import {
-  IJsonPlaceholderRepository, JsonPlaceholderRepository, ContentType,
-  jsonPlaceHolderBaseUrl } from '../../services/module';
+import { IJsonPlaceholderRepository, JsonPlaceholderRepository, ContentType } from '../../services/module';
 import { stubPosts } from '../StubData';
 
 describe('JsonPlaceholderRepository', () => {
