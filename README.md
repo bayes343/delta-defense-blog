@@ -19,4 +19,3 @@ A continuous delivery pipeline is setup for this project (referenced below).  Al
 - Repository: [GitHub](https://github.com/bayes343/delta-defense-blog)
 - Pipeline: [Azure Devops Pipeline](https://dev.azure.com/joseph-w-bayes/delta-defense-blog/_build)
 - Board: [Azure Devops Board](https://dev.azure.com/joseph-w-bayes/delta-defense-blog/_workitems/recentlycompleted/)
-- Production site: https://delta-defense-blog.web.app/
